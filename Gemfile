@@ -5,6 +5,8 @@ ruby '3.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
+gem 'twitter-bootstrap-rails'
+
 # Use sqlite3 as the database for Active Record
 gem 'rails_12factor'
 
