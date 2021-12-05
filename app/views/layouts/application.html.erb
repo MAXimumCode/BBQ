@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Bbq" %></title>
     <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= stylesheet_link_tag "custom", media: "all" %>
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
@@ -46,7 +48,7 @@
           <span class="icon-bar"></span>
         </button>
 
-        <%= link_to "BBQ!", root_path, class: 'navbar-brand' %>
+        <%= link_to "PINCHITO", root_path, class: 'navbar-brand' %>
 
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
@@ -73,7 +75,7 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2021</p>
+        <p>&copy; Серьезная компания </p>
       </footer>
 
     </div> <!-- /container -->

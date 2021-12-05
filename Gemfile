@@ -3,20 +3,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.2'
 
-gem 'devise'
+
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
-gem 'twitter-bootstrap-rails'
 gem 'rails_12factor'
-
 gem 'bootsnap', '>= 1.4.4', require: false
-
 gem 'jbuilder', '~> 2.7'
-gem 'jquery-rails'
 gem 'puma', '~> 5.0'
-gem 'rails-i18n', '~> 6.0.0'
 gem 'sass-rails', '>= 6'
-gem 'uglifier'
-gem 'webpacker', '~> 5.0'
 
 group :production do
   gem 'pg'
@@ -34,4 +27,13 @@ group :development do
   gem 'web-console', '>= 4.1.0'
 end
 
+#custom
+gem 'devise'
+gem 'simple_form'
+gem 'jquery-rails'
+gem 'uglifier'
+gem 'webpacker', '~> 5.0'
+gem 'rails-i18n', '~> 6.0.0'
+gem 'twitter-bootstrap-rails'
+gem 'bootstrap', '~> 5.1'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

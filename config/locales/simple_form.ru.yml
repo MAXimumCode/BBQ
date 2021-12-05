@@ -1,0 +1,40 @@
+ru:
+  simple_form:
+    "yes": "Да"
+    "no": "Нет"
+    required:
+      text: "обязательное поле"
+      mark: "*"
+      # Вы можете раскомментировать следующую строку, если вам необходимо целиком изменить html-код для обязательных полей.
+      # Когда используется html, text и mark игнорируются
+      # html: "<abbr title="required">*</abbr>"
+    error_notification:
+      default_message: "Пожалуйста исправьте следующие ошибки:"
+    placeholders:
+        user:
+          name: "Имя пользователя"
+          email: "example@mail.ru"
+          password: "не менее 6 символов"
+          password_confirmation: "не менее 6 символов"
+    labels:
+        defaults:
+          name: "Имя"
+          password: "Пароль"
+          email: "E-mail"
+          remember_me: "Запомни меня"
+        user:
+          new:
+            name: "Имя"
+            password: "Пароль"
+            password_confirmation: "Подтверждение пароля"
+            email: "E-mail"
+          edit:
+            name: "Имя"
+            password: "Пароль"
+            email: "E-mail."
+
+#    hints:
+#        defaults:
+#          name: "Имя пользователя для входа в систему."
+#          password: "Пожалуйста, не используйте спецсимволы."
+
