@@ -1,4 +1,7 @@
 ru:
+  devise:
+    failure:
+      invalid: "Неправильный %{authentication_keys} или пароль."
   buttons:
     sign_in: "Войти"
     sign_up: "Зарегистрироваться"
