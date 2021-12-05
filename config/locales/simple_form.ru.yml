@@ -32,7 +32,6 @@ ru:
             name: "Имя"
             password: "Пароль"
             email: "E-mail."
-
 #    hints:
 #        defaults:
 #          name: "Имя пользователя для входа в систему."

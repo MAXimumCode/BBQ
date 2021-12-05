@@ -1,4 +1,8 @@
 ru:
+  buttons:
+    sign_in: "Войти"
+    sign_up: "Зарегистрироваться"
+    password_forget: "Забыли пароль?"
   helpers:
     submit:
       user:
