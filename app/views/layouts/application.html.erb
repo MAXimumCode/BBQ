@@ -48,7 +48,7 @@
           <span class="icon-bar"></span>
         </button>
 
-        <%= link_to "PINCHITO", root_path, class: 'navbar-brand' %>
+        <%= link_to t('app.name'), root_path, class: 'navbar-brand' %>
 
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
@@ -75,7 +75,7 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Серьезная компания </p>
+        <p>&copy; <%= t('app.company') %> </p>
       </footer>
 
     </div> <!-- /container -->

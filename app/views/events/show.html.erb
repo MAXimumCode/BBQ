@@ -8,7 +8,7 @@
         <div class="col-md-6">
           <div class="event-description">
             <h1><%= @event.title %></h1>
-            <h3><%= @event.datetime %></h3>
+            <h3><%= l @event.datetime, format: :short %></h3>
             <h3><small><%= link_to @event.address,
                                    "https://yandex.ru/maps/?text=#{@event.address}" %></small></h3>
             <p><%= @event.description %></p>
@@ -16,7 +16,9 @@
 
           <% if current_user_can_edit?(@event) %>
             <div class="buffer-top">
-              <%= link_to 'Изменить', edit_event_path(@event), class: 'btn btn-primary' %>
+              <%= link_to t('buttons.change'), edit_event_path(@event), class: 'btn btn-primary' %>
+              <%= link_to t('buttons.delete'), event_path(@event),
+                          method: :delete, data: { confirm: t('confirmation.are_you_sure') }, class: 'btn btn-danger' %>
             </div>
           <% end %>
 

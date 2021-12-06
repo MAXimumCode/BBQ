@@ -81,6 +81,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.10.1)
+      devise (>= 4.8.0)
     erubi (1.10.0)
     execjs (2.8.1)
     ffi (1.15.4)
@@ -170,6 +172,8 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    russian (0.6.0)
+      i18n (>= 0.5.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -229,6 +233,7 @@ DEPENDENCIES
   bootstrap (~> 5.1)
   byebug
   devise
+  devise-i18n
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
@@ -238,6 +243,7 @@ DEPENDENCIES
   rails (~> 6.1.4, >= 6.1.4.1)
   rails-i18n (~> 6.0.0)
   rails_12factor
+  russian
   sass-rails (>= 6)
   simple_form
   spring

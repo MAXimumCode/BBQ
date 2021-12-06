@@ -1,28 +1,16 @@
-<%= form_for(@event) do |f| %>
-  <%= render partial: 'partials/form_errors', locals: {model: @event} %>
+<%= simple_form_for @event do |f| %>
 
-  <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control' %>
-  </div>
+  <%= f.error_notification %>
 
-  <div class="form-group">
-    <%= f.label :address %>
-    <%= f.text_field :address, class: 'form-control' %>
-  </div>
+  <%= f.input :title %>
 
-  <div class="form-group">
-    <%= f.label :datetime %>
-    <p><%= f.datetime_select :datetime, class: 'form-control' %></p>
-  </div>
+  <%= f.input :address  %>
 
-  <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_area :description, class: 'form-control' %>
-  </div>
+  <%= f.input :datetime, as: :date, html5: true %>
 
-  <div class="actions">
-    <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
-    или <%= link_to 'вернуться', :back %>
-  </div>
+  <%= f.input :description %>
+
+  <%= f.button :submit, t('buttons.save'), class: "btn-primary" %>
+  или <%= link_to 'вернуться', :back %>
+
 <% end %>

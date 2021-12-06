@@ -31,3 +31,9 @@
 
 en:
   hello: "Hello world"
+  buttons:
+    sign_up: ""
+    sign_in: ""
+    save: ""
+    change: ""
+    delete: ""

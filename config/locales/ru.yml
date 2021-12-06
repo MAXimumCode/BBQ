@@ -1,14 +1,38 @@
 ru:
-  devise:
-    failure:
-      invalid: "Неправильный %{authentication_keys} или пароль."
-      unauthenticated: "Нужно зарегистрироваться, что бы продолжить."
+  activerecord:
+    models:
+      user: "Пользователь"
+      event: "Событие"
+
+    attributes:
+      user:
+        email: "Email"
+        name: "Имя"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+      event:
+        title: "Название"
+        address: "Место проведения"
+        datetime: "Дата и время"
+        description: "Описание"
+
+  controllers:
+    events:
+      created: "Вы создали новое мероприятие"
+      updated: "Вы обновили мероприятие"
+      destroyed: "Вы удалили мероприятие :("
+    users:
+      updated: "Вы обновили свой профиль"
+
+  app:
+    name: "Шашлычная"
+    company: "Не всегда хороший программист"
+  confirmation:
+    are_you_sure: "Точно удалить?"
   buttons:
+    save: "Сохранить"
     sign_in: "Войти"
     sign_up: "Зарегистрироваться"
     password_forget: "Забыли пароль?"
-  helpers:
-    submit:
-      user:
-        create: "Зарегистрироваться"
-        update: "Save Changes"
+    change: "Изменить"
+    delete: "Удалить"

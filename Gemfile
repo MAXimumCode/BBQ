@@ -29,7 +29,9 @@ end
 
 #custom
 gem 'devise'
+gem 'devise-i18n'
 gem 'simple_form'
+gem 'russian'
 gem 'jquery-rails'
 gem 'uglifier'
 gem 'webpacker', '~> 5.0'
