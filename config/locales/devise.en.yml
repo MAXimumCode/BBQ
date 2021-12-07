@@ -77,3 +77,6 @@ en:
   simple_form:
     hints:
       password_check: ""
+    placeholders:
+      passwords:
+        email: ""

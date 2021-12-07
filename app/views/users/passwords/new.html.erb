@@ -1,16 +1,22 @@
-<h2>Forgot your password?</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <h3>Забыли пароль?</h3>
+      <%= simple_form_for resource, url: password_path(resource_name), html: { method: :post } do |f| %>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
+        <%= f.error_notification %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <%= f.input :email, placeholder: t('simple_form.placeholders.passwords.email'),
+                    autofocus: true, autocomplete: 'email' %>
+
+        <%= f.button :submit, t('buttons.send_instructions'), class: "btn-primary" %>
+
+      <% end %>
+      <p></p>
+      <%= render "users/shared/links" %>
+      <p></p>
+    </div>
   </div>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
 
-<%= render "users/shared/links" %>

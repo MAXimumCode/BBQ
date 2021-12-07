@@ -12,6 +12,8 @@ ru:
     error_notification:
       default_message: "Пожалуйста исправьте следующие ошибки:"
     placeholders:
+        passwords:
+          email: "Почта указанная при регистрации"
         user:
           name: "Имя пользователя"
           email: "example@mail.ru"
