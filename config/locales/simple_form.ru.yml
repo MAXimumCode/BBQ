@@ -33,7 +33,6 @@ ru:
             name: "Имя"
             password: "Пароль"
             email: "E-mail."
-#    hints:
-#        defaults:
-#          name: "Имя пользователя для входа в систему."
-#          password: "Пожалуйста, не используйте спецсимволы."
+    hints:
+        defaults:
+          current_password: "Введите свой текущий пароль"

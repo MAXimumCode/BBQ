@@ -36,3 +36,5 @@ ru:
     password_forget: "Забыли пароль?"
     change: "Изменить"
     delete: "Удалить"
+    update: "Изменить"
+    back: "Назад"

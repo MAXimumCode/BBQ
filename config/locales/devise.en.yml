@@ -74,3 +74,6 @@ en:
     company: ""
   confirmation:
     are_you_sure: ""
+  simple_form:
+    hints:
+      password_check: ""
