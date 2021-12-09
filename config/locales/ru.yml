@@ -29,6 +29,14 @@ ru:
     company: "Не всегда хороший программист"
   confirmation:
     are_you_sure: "Точно удалить?"
+  titles:
+    events: "События"
+    edit_event: "Редактирование события"
+    new_event: "Новое событие"
+    change_password: "Сменить пароль"
+    forgot_password: "Забыли пароль?"
+    registration: "Регистрация"
+    log_in: "Войти"
   buttons:
     save: "Сохранить"
     sign_in: "Войти"
@@ -39,3 +47,8 @@ ru:
     update: "Изменить"
     back: "Вернуться"
     send_instructions: "Выслать инструкции по востановлению пароля"
+    create: "Создать событие"
+  links:
+    sign_in: "Войти"
+    sign_up: "Зарегистрироваться"
+    exit: "Выйти"

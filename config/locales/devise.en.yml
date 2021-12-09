@@ -80,3 +80,13 @@ en:
     placeholders:
       passwords:
         email: ""
+  titles:
+    events: ""
+    edit_event: ""
+    new_event: ""
+    forgot_password: ""
+    change_password: ""
+  links:
+    sign_in: ""
+    exit: ""
+    sign_up: ""

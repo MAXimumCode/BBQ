@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-5">
-      <h3>Войти</h3>
+      <h3><%= t('titles.log_in')%></h3>
       <%= simple_form_for @user, url: session_path(resource_name) do |f| %>
 
         <%= f.error_notification %>

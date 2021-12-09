@@ -1,15 +1,19 @@
 <div class="container">
   <div class="row">
     <div class="col-md-5">
-      <h3>Забыли пароль?</h3>
+      <h3><%= t('titles.forgot_password')%></h3>
       <%= simple_form_for resource, url: password_path(resource_name), html: { method: :post } do |f| %>
 
         <%= f.error_notification %>
 
-        <%= f.input :email, placeholder: t('simple_form.placeholders.passwords.email'),
-                    autofocus: true, autocomplete: 'email' %>
+        <div class="mb-3">
+          <%= f.input :email, placeholder: t('simple_form.placeholders.passwords.email'),
+                      autofocus: true, autocomplete: 'email' %>
+        </div>
 
-        <%= f.button :submit, t('buttons.send_instructions'), class: "btn-primary" %>
+        <div class="mb-3">
+          <%= f.button :submit, t('buttons.send_instructions'), class: "btn-primary" %>
+        </div>
 
       <% end %>
       <p></p>
