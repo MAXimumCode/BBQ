@@ -5,13 +5,18 @@
       <%= simple_form_for @user, url: session_path(resource_name) do |f| %>
 
         <%= f.error_notification %>
+        <div class="mb-3">
+          <%= f.input :email %>
+        </div>
 
-        <%= f.input :email %>
+        <div class="mb-3">
+          <%= f.input :password %>
+        </div>
 
-        <%= f.input :password %>
-
-        <%= f.input :remember_me, :label_html => { :class => 'label_type' },
+        <div class="mb-3">
+          <%= f.input :remember_me, :label_html => { :class => 'label_type' },
                     wrapper: :vertical_boolean, as: :boolean if devise_mapping.rememberable? %>
+        </div>
 
         <%= f.button :submit, t('buttons.sign_in'), class: "btn btn-primary" %>
 

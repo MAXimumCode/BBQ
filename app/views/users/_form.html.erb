@@ -2,11 +2,15 @@
 
   <%= f.error_notification %>
 
-  <%= f.input :name, required: false %>
-
-  <%= f.input :email  %>
-
-  <%= f.button :submit, t('buttons.save'), class: "btn-primary" %>
-  или <%= link_to t('buttons.back'), :back %>
+  <div class="mb-3">
+    <%= f.input :name, required: false %>
+  </div>
+  <div class="mb-3">
+    <%= f.input :email  %>
+  </div>
+  <div class="actions">
+    <%= f.button :submit, t('buttons.save'), class: "btn-primary" %>
+    или <%= link_to t('buttons.back'), :back %>
+  </div>
 
 <% end %>

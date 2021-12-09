@@ -2,13 +2,21 @@
 
   <%= f.error_notification %>
 
-  <%= f.input :title %>
+  <div class="mb-3">
+    <%= f.input :title %>
+  </div>
 
-  <%= f.input :address  %>
+  <div class="mb-3">
+    <%= f.input :address %>
+  </div>
 
-  <%= f.input :datetime, as: :date, html5: true %>
+  <div class="mb-3">
+    <%= f.input :datetime, as: :date, html5: true %>
+  </div>
 
-  <%= f.input :description %>
+  <div class="mb-3">
+    <%= f.input :description %>
+  </div>
 
   <%= f.button :submit, t('buttons.save'), class: "btn-primary" %>
   или <%= link_to 'вернуться', :back %>
