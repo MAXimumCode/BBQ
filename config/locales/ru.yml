@@ -37,6 +37,7 @@ ru:
     forgot_password: "Забыли пароль?"
     registration: "Регистрация"
     log_in: "Войти"
+    edit_profile: "Редактирование профиля"
   buttons:
     save: "Сохранить"
     sign_in: "Войти"
