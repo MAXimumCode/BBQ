@@ -15,6 +15,12 @@ ru:
         address: "Место проведения"
         datetime: "Дата и время"
         description: "Описание"
+      comment:
+        body: "Комментарий"
+        user_name: "Имя пользователя"
+      subscription:
+        user_name: "Имя пользователя"
+        user_email: "E-mail"
 
   controllers:
     events:
@@ -23,6 +29,14 @@ ru:
       destroyed: "Вы удалили мероприятие :("
     users:
       updated: "Вы обновили свой профиль"
+    comments:
+      created: "Ваш комментарий добавлен"
+      error: "Ошибка с комментарием."
+      destroyed: "Комментарий удален"
+    subscriptions:
+      created: "Вы подписаны на это событие"
+      error: "Подписка/отписка не сработала"
+      destroyed: "Участник отписан"
 
   app:
     name: "Шашлычная"
@@ -49,7 +63,17 @@ ru:
     back: "Вернуться"
     send_instructions: "Выслать инструкции по востановлению пароля"
     create: "Создать событие"
+    send: "отправить"
+    subscribe: "Подписаться"
+    password_edit: "Сменить пароль"
+    profile_edit: "Редактировать профиль"
   links:
     sign_in: "Войти"
     sign_up: "Зарегистрироваться"
     exit: "Выйти"
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комменатрий?'
+  subscriptions:
+    subscription:
+      destroy_confirm: "Вы уверены, что хотите удалить это подписку?"

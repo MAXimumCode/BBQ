@@ -6,7 +6,7 @@
 
     <div class="thumbnail-inner event-info-inner">
       <div class="caption m-2">
-        <div class="event-description">
+        <div class="event-description text-center">
           <h3><%= link_to event.title, event_path(event), class: 'btn btn-outline-success' %></h3>
           <h3><small><%= l event.datetime, format: :short %></small></h3>
           <div class="buffer-both"><%= event.address %></div>

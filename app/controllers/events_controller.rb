@@ -7,7 +7,10 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
-  def show; end
+  def show
+    @new_comment = @event.comments.build(params[:comment])
+    @new_subscription = @event.subscriptions.build(params[:subscription])
+  end
 
   def new
     @event = current_user.events.build

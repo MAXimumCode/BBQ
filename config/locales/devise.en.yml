@@ -70,6 +70,14 @@ en:
       destroyed: ""
     users:
       updated: ""
+    comments:
+      created: ""
+      error: ""
+      destroyed: ""
+    subscriptions:
+      created: ""
+      error: ""
+      destroyed: ""
   app:
     company: ""
   confirmation:
@@ -91,3 +99,9 @@ en:
     sign_in: ""
     exit: ""
     sign_up: ""
+  comments:
+    comment:
+      destroy_confirm: ""
+  subscriptions:
+    subscription:
+      destroy_confirm: ""

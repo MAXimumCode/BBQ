@@ -1,0 +1,17 @@
+<%= simple_form_for [@event, comment] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :body, required: true, class: 'form-control' %>
+  </div>
+
+  <% unless user_signed_in? %>
+    <div class="form-group">
+      <%= f.input :user_name, class: 'form-control' %>
+    </div>
+  <% end %>
+  <p></p>
+  <div class="actions">
+    <%= f.button :submit, t('buttons.send'), class: 'btn btn-primary' %>
+  </div>
+<% end %>

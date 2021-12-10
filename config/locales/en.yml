@@ -41,3 +41,7 @@ en:
     back: ""
     send_instructions: ""
     create: ""
+    send: ""
+    subscribe: ""
+    password_edit: ""
+    profile_edit: ""

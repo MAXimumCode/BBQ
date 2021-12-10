@@ -29,7 +29,7 @@ end
 gem 'devise'
 gem 'devise-i18n'
 gem 'rails-i18n', '~> 6.0.0'
-gem 'russian'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker', '~> 5.0'
+gem "font-awesome-rails"
