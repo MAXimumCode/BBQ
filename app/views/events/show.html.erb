@@ -43,12 +43,12 @@
     </div>
 
     <div class="col-md-4">
-      <div class="event-owner">
-        <h4>Зовет:</h4>
+      <div class="event-owner shadow-sm">
+        <h4><%= t('subscriptions.call')%></h4>
         <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
-      <div class="event-subscriptions">
-        <h4>Пойдут:</h4>
+      <div class="event-subscriptions shadow-sm">
+        <h4><%= t('subscriptions.will_go')%></h4>
         <div>
           <p>
             <%= render partial: 'subscriptions/subscription',
@@ -56,8 +56,8 @@
           </p>
         </div>
       </div>
-      <div class="event-subscription-form">
-        <h4>Я пойду:</h4>
+      <div class="event-subscription-form shadow-sm">
+        <h4><%= t('subscriptions.i_will_go')%></h4>
         <div>
           <%= render partial: 'subscriptions/form', locals: {
             subscription: @new_subscription || @event.subscriptions.build

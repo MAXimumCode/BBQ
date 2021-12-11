@@ -23,7 +23,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: I18n.t('controllers.events.created') }
+        format.html { redirect_to @event, notice: t('controllers.events.created') }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -33,7 +33,7 @@ class EventsController < ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to @event, notice: I18n.t('controllers.events.updated') }
+        format.html { redirect_to @event, notice: t('controllers.events.updated') }
       else
         format.html { render :edit, status: :unprocessable_entity }
       end
@@ -43,7 +43,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to events_path, notice: I18n.t('controllers.events.destroyed') }
+      format.html { redirect_to events_path, notice: t('controllers.events.destroyed') }
     end
   end
 

@@ -95,6 +95,8 @@ en:
     forgot_password: ""
     change_password: ""
     edit_profile: ""
+    create: ""
+    created: ""
   links:
     sign_in: ""
     exit: ""
@@ -105,3 +107,6 @@ en:
   subscriptions:
     subscription:
       destroy_confirm: ""
+    call: ""
+    will_go: ""
+    i_will_go: ""

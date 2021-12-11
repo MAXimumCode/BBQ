@@ -44,7 +44,6 @@ ru:
   confirmation:
     are_you_sure: "Точно удалить?"
   titles:
-    events: "События"
     edit_event: "Редактирование события"
     new_event: "Новое событие"
     change_password: "Сменить пароль"
@@ -52,6 +51,9 @@ ru:
     registration: "Регистрация"
     log_in: "Войти"
     edit_profile: "Редактирование профиля"
+    created: "Пользователь не организовал пока ни одного события"
+    create: "Организовал:"
+    events: "События"
   buttons:
     save: "Сохранить"
     sign_in: "Войти"
@@ -77,3 +79,6 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: "Вы уверены, что хотите удалить это подписку?"
+    call: "Зовет:"
+    will_go: "Пойдут:"
+    i_will_go: "Я пойду:"
