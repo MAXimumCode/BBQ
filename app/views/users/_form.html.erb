@@ -10,7 +10,8 @@
   </div>
   <div class="actions">
     <%= f.button :submit, t('buttons.save'), class: 'btn-primary' %>
-    или <%= link_to t('buttons.back'), :back, class: 'btn btn-secondary btn-sm' %>
+    <%= t('text.or') %>
+    <%= link_to t('buttons.back'), :back, class: 'btn btn-secondary btn-sm' %>
   </div>
 
 <% end %>

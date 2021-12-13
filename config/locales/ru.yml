@@ -82,3 +82,9 @@ ru:
     call: "Зовет:"
     will_go: "Пойдут:"
     i_will_go: "Я пойду:"
+  text:
+    or: "или"
+    sign_in_with: "Войти в систему с"
+  errors:
+    messages:
+      not_saved: ""

@@ -110,3 +110,6 @@ en:
     call: ""
     will_go: ""
     i_will_go: ""
+  text:
+    or: ""
+    sign_in_with: ""
