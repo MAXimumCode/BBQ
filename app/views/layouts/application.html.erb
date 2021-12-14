@@ -10,7 +10,7 @@
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
-    <%= stylesheet_pack_tag "application", :media => "all" %>
+    <%= stylesheet_pack_tag "application", media: "all" %>
 
     <%= javascript_pack_tag "application" %>
 
@@ -56,7 +56,7 @@
                   <%= link_to current_user.name, current_user, class: 'nav-link' %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to t('links.exit'), destroy_user_session_path, :method => :delete, class: 'nav-link' %>
+                  <%= link_to t('links.exit'), destroy_user_session_path, method: :delete, class: 'nav-link' %>
                 </li>
               <% else %>
                 <li class="nav-item">
