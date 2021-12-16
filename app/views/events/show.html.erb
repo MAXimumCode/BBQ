@@ -48,7 +48,7 @@
         <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
       <div class="event-subscriptions shadow-sm">
-        <h4><%= t('subscriptions.will_go')%></h4>
+        <h4><%= t('subscriptions.will_go') if @event.subscriptions.except(@new_subscription).any? %></h4>
         <div>
           <p>
             <%= render partial: 'subscriptions/subscription',

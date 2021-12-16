@@ -3,7 +3,6 @@ class SubscriptionsController < ApplicationController
 
   before_action :set_subscription, only: [:destroy]
 
-
   def create
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
@@ -16,18 +15,19 @@ class SubscriptionsController < ApplicationController
   end
 
   def destroy
-    message = {notice: t('controllers.subscriptions.destroyed')}
+    message = { notice: t('controllers.subscriptions.destroyed') }
 
     if current_user_can_edit?(@subscription)
       @subscription.destroy
     else
-      message = {alert: t('controllers.subscriptions.error')}
+      message = { alert: t('controllers.subscriptions.error') }
     end
 
     redirect_to @event, message
   end
 
   private
+
   def set_subscription
     @subscription = @event.subscriptions.find(params[:id])
   end

@@ -11,15 +11,15 @@
           </div>
 
           <div class="mb-3">
-            <%= f.input :email  %>
+            <%= f.input :email, required: true  %>
           </div>
 
           <div class="mb-3">
-            <%= f.input :password %>
+            <%= f.input :password, required: true %>
           </div>
 
           <div class="mb-3">
-            <%= f.input :password_confirmation %>
+            <%= f.input :password_confirmation, required: true %>
           </div>
 
           <%= f.button :submit, t('buttons.sign_up'), class: "btn-primary" %>

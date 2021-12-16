@@ -1,5 +1,11 @@
 ru:
   activerecord:
+    errors:
+      models:
+        subscription:
+          attributes:
+            user_email:
+              registered: "Email уже занят"
     models:
       user: "Пользователь"
       event: "Событие"
