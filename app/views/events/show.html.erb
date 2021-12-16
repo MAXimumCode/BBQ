@@ -56,7 +56,7 @@
           </p>
         </div>
       </div>
-      <% unless current_user_can_edit?(@event) %>
+      <% unless event_belong?(@event) %>
         <div class="event-subscription-form shadow-sm" >
           <h4><%= t('subscriptions.i_will_go') %></h4>
           <div>
