@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   helper_method :current_user_can_edit?
-  helper_method :event_belong?
+  helper_method :can_subscribe?
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(
@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
     )
   end
 
-  def event_belong?(event)
-    event.user == current_user
+  def can_subscribe?(event)
+    event.user == current_user || event.subscriptions.map(&:user_name).include?(current_user.name)
   end
 end
