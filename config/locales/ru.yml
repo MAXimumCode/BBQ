@@ -6,6 +6,7 @@ ru:
           attributes:
             user_email:
               registered: "уже занят"
+              invalid: "Ошибка подписи"
     models:
       user: "Пользователь"
       event: "Событие"
