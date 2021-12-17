@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     new AirDatepicker('.my_class', {
+        isMobile: true,
+        autoClose: true,
         timepicker: true,
         position({$datepicker, $target, $pointer, isViewChange, done}) {
             let popper = createPopper($target, $datepicker, {
