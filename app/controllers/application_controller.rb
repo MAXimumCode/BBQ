@@ -21,6 +21,8 @@ class ApplicationController < ActionController::Base
   end
 
   def can_subscribe?(event)
-    event.user == current_user || event.subscriptions.map(&:user_name).include?(current_user.name)
+    unless current_user.nil?
+      event.user == current_user || event.subscriptions.map(&:user_name).include?(current_user.name)
+    end
   end
 end
