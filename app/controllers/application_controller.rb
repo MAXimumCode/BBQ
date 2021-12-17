@@ -21,6 +21,6 @@ class ApplicationController < ActionController::Base
   end
 
   def event_belong?(event)
-    user_signed_in? || event.user == current_user
+    event.user == current_user
   end
 end
