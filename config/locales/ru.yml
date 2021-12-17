@@ -5,7 +5,7 @@ ru:
         subscription:
           attributes:
             user_email:
-              registered: "Email уже занят"
+              registered: "уже занят"
     models:
       user: "Пользователь"
       event: "Событие"
