@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     new AirDatepicker('.my_class', {
+        buttons: ['clear'],
         isMobile: true,
         autoClose: true,
         timepicker: true,
