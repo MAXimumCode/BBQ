@@ -10,6 +10,7 @@ ru:
     models:
       user: "Пользователь"
       event: "Событие"
+      photo: "Фотография"
 
     attributes:
       user:
@@ -28,6 +29,8 @@ ru:
       subscription:
         user_name: "Имя пользователя"
         user_email: "E-mail"
+      photo:
+        photo: "Фотография"
 
   controllers:
     events:
@@ -44,6 +47,10 @@ ru:
       created: "Вы подписаны на это событие"
       error: "Подписка/отписка не сработала"
       destroyed: "Участник отписан"
+    photos:
+      created: "Вы добавили фотографию к событию"
+      error: "Что-то не так с фоткой"
+      destroyed: "Вы удалили фотку"
 
   app:
     name: "Шашлычная"
@@ -61,6 +68,9 @@ ru:
     created: "Пользователь не организовал пока ни одного события"
     create: "Организовал:"
     events: "События"
+    avatar: "Аватарка"
+    photo_add: "Добавил"
+    photo: "Фотография"
   buttons:
     save: "Сохранить"
     sign_in: "Войти"
@@ -76,6 +86,7 @@ ru:
     subscribe: "Подписаться"
     password_edit: "Сменить пароль"
     profile_edit: "Редактировать профиль"
+    upload: "Загрузить"
   links:
     sign_in: "Войти"
     sign_up: "Зарегистрироваться"

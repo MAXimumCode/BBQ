@@ -78,6 +78,10 @@ en:
       created: ""
       error: ""
       destroyed: ""
+    photos:
+      created: ""
+      error: ""
+      destroyed: ""
   app:
     company: ""
   confirmation:
@@ -97,6 +101,9 @@ en:
     edit_profile: ""
     create: ""
     created: ""
+    avatar: ""
+    photo_add: ""
+    photo: ""
   links:
     sign_in: ""
     exit: ""
