@@ -120,3 +120,17 @@ en:
   text:
     or: ""
     sign_in_with: ""
+  event_mailer:
+    comment:
+      title: ""
+      author: ""
+      event: ""
+      datetime: ""
+      owner: ""
+    subscription:
+      title: ""
+      name: ""
+      email: ""
+      event: ""
+      author: ""
+      owner: ""
