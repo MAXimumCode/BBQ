@@ -134,3 +134,9 @@ en:
       event: ""
       author: ""
       owner: ""
+    photo:
+      title: ""
+      owner: ""
+      datetime: ""
+      event: ""
+      author: ""
