@@ -1,6 +1,7 @@
 import AirDatepicker from 'air-datepicker'
 import {createPopper} from '@popperjs/core';
 import anime from 'animejs';
+import 'bs5-lightbox'
 
 document.addEventListener('DOMContentLoaded', () => {
     let picker = document.querySelector('.my_class')
@@ -67,3 +68,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }}
     )
 })
+
+

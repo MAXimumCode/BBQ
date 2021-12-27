@@ -127,3 +127,6 @@ ru:
       event: "Событие"
       datetime: "Состоится"
       owner: "Организатор"
+  photos:
+    photo:
+      delete_photo?: "Удалить фото?"

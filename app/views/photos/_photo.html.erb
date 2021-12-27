@@ -1,5 +1,17 @@
+<%= title = t('titles.photo_add') %> <%= render partial: 'users/user', object: photo.user %>
 <div class="event-photo buffer-both">
-  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
+  <span class="event-photo">
+    <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: {
+      toggle: 'lightbox', title: title
+    } %>
+  </span>
 
-  <%= t('titles.photo_add') %> <%= render partial: 'users/user', object: photo.user %>
+  <% if current_user_can_edit?(photo) %>
+    <%= link_to(
+          fa_icon('times'),
+          event_photo_path(photo.event, photo),
+          method: :delete,
+          data: {confirm: t('.delete_photo?')}
+        ) %>
+  <% end %>
 </div>

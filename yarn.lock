@@ -1640,6 +1640,11 @@ browserslist@^4.0.0, browserslist@^4.12.0, browserslist@^4.17.5, browserslist@^4
     node-releases "^2.0.1"
     picocolors "^1.0.0"
 
+bs5-lightbox@^1.7.7:
+  version "1.7.7"
+  resolved "https://registry.yarnpkg.com/bs5-lightbox/-/bs5-lightbox-1.7.7.tgz#2c9fdea5f1ef329c7708b041a3b38e4db05efd79"
+  integrity sha512-wSVSrbDXTg9AnqJ0oMWdVeiLdiiSKe664uqgOkSM3nZnPxKRwByXV6FFQD4f2pX79TZIlgU4BrNPYP4lnBv+Qw==
+
 buffer-from@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.2.tgz#2b146a6fd72e80b4f55d255f35ed59a3a9a41bd5"
