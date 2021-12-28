@@ -111,7 +111,7 @@ ru:
       title: 'Новый комментарий'
       author: 'Автор'
       event: 'Событие'
-      datetime: 'Состоится'
+      datetime: 'Дата и время'
       owner: 'Организатор'
     subscription:
       title: 'Новая подписка'
@@ -119,14 +119,17 @@ ru:
       email: 'Email'
       author: 'Автор'
       event: 'Событие'
-      datetime: 'Состоится'
+      datetime: 'Дата и время'
       owner: 'Организатор'
     photo:
       title: "Новое фото"
       author: "Автор"
       event: "Событие"
-      datetime: "Состоится"
+      datetime: "Дата и время"
       owner: "Организатор"
   photos:
     photo:
       delete_photo?: "Удалить фото?"
+  new_subscription: "Новая подписка на"
+  new_comment: "Новый комментарий @"
+  new_photo: "Новое фото @"
