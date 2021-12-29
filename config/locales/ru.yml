@@ -113,6 +113,7 @@ ru:
       event: 'Событие'
       datetime: 'Дата и время'
       owner: 'Организатор'
+      subject: 'Новый комментарий @ %{event}'
     subscription:
       title: 'Новая подписка'
       name: 'Имя'
@@ -121,12 +122,14 @@ ru:
       event: 'Событие'
       datetime: 'Дата и время'
       owner: 'Организатор'
+      subject: 'Новая подписка на %{event}'
     photo:
       title: "Новое фото"
       author: "Автор"
       event: "Событие"
       datetime: "Дата и время"
       owner: "Организатор"
+      subject: 'Новая фотография %{event}'
   photos:
     photo:
       delete_photo?: "Удалить фото?"
