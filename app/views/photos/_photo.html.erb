@@ -2,7 +2,7 @@
 <div class="event-photo buffer-both">
   <span class="event-photo">
     <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: {
-      toggle: 'lightbox', title: title
+      lightbox: 'lightbox', title: "#{ title } #{render partial: 'users/user', object: photo.user}",
     } %>
   </span>
 
