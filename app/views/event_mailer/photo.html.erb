@@ -2,6 +2,7 @@
 
 <div>
   <img src="<%= @photo.photo.thumb.url %>" alt="Picture" width="100">
+  <p><%= @photo.photo.url %></p>
 </div>
 
 <p><%= t '.author' %>: <strong><%= @photo.user.name %></strong></p>
