@@ -3,7 +3,7 @@
   <span class="event-photo">
     <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: {
       lightbox: 'lightbox', title: "#{ title } #{render partial: 'users/user', object: photo.user}",
-    } %>
+    } if photo.photo.url %>
   </span>
 
   <% if current_user_can_edit?(photo) %>
