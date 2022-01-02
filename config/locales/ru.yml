@@ -70,7 +70,8 @@ ru:
     events: "События"
     avatar: "Аватарка"
     photo_add: "Добавил"
-    photo: "Фотография"
+    photo: "Фото"
+    photos: "Загруженные фото:"
   buttons:
     save: "Сохранить"
     sign_in: "Войти"
@@ -106,6 +107,7 @@ ru:
   errors:
     messages:
       not_saved: ""
+    photo: "Не выбрано фото!"
   event_mailer:
     comment:
       title: 'Новый комментарий'

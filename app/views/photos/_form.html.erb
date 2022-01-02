@@ -2,15 +2,20 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
-    <div class="row">
-      <div class="col-sm-4">
-        <p><%= f.file_field :photo, as: :file %></p>
+  <% if user_signed_in? %>
+    <div class="form-inputs">
+      <div class="row">
+        <div class="col-sm-4">
+          <p><%= f.input :photo, as: :file, error: t('errors.photo') %></p>
+        </div>
       </div>
     </div>
-  </div>
+
 
   <div class="form-actions">
     <%= f.button :submit, t('buttons.upload'), class: 'btn btn-info' %>
   </div>
+
+  <% end %>
 <% end %>
+

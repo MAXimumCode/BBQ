@@ -63,6 +63,7 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+    photo: ""
   controllers:
     events:
       created: ""
@@ -104,6 +105,7 @@ en:
     avatar: ""
     photo_add: ""
     photo: ""
+    photos: ""
   links:
     sign_in: ""
     exit: ""

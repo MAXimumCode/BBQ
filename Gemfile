@@ -35,4 +35,3 @@ gem 'devise-i18n'
 gem 'rails-i18n', '~> 6.0.0'
 gem 'simple_form'
 gem 'webpacker', '~> 5.0'
-
