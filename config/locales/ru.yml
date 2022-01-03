@@ -138,3 +138,10 @@ ru:
   new_subscription: "Новая подписка на"
   new_comment: "Новый комментарий @"
   new_photo: "Новое фото @"
+  users:
+    passwords:
+      edit:
+        change_my_password: "Сменить мой пароль"
+        change_your_password: "Смена пароля"
+        new_password: "Новый пароль"
+        confirm_new_password: "Подтверждение пароля"

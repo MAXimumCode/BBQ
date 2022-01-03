@@ -148,3 +148,10 @@ en:
   new_subscription: ""
   new_photo: ""
   new_comment: ""
+  users:
+    passwords:
+      edit:
+        change_my_password: ""
+        change_your_password: ""
+        confirm_new_password: ""
+        new_password: ""
