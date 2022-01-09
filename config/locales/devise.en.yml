@@ -109,6 +109,9 @@ en:
     photo: ""
     photos: ""
     pincode: ""
+    discussion: ""
+    location: ""
+    participants: ""
   links:
     sign_in: ""
     exit: ""

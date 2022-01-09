@@ -3,7 +3,7 @@
 
     <div class="col-md-12">
       <%= content_tag 'div', '', class: 'event-background',
-                      style: "background-image: url(#{event_photo(@event)})" %>
+                      style: "background-image: url(#{event_photo(@event)})"  %>
 
       <div class="event-info-inner row">
         <div class="col-md-6">
@@ -26,39 +26,52 @@
           <p></p>
         </div>
       </div>
+
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-8">
-      <div class="event-photos">
-        <h5><%= t('titles.photos') %></h5>
-          <div class="event-photos-gallery">
-            <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
-          </div>
+  <!-- Навигация -->
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="comments-tab" data-bs-toggle="tab" data-bs-target="#tab-comments" type="button" role="tab" aria-selected="true">
+        <%= t('titles.discussion')%>
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="photo-tab" data-bs-toggle="tab" data-bs-target="#tab-photos" type="button" role="tab" aria-selected="false">
+        <%= t('titles.photos')%>
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="subscriptions-tab" data-bs-toggle="tab" data-bs-target="#tab-subscriptions" type="button" role="tab" aria-selected="false">
+        <%= t('titles.participants')%>
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="map-tab" data-bs-toggle="tab" data-bs-target="#tab-map" type="button" role="tab" aria-selected="false">
+        <%= t('titles.location')%>
+      </button>
+    </li>
+  </ul>
 
-          <div class="event-photo-form">
-            <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
-          </div>
-      </div>
-
+  <!-- Табы -->
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" role="tabpanel" id="tab-comments">
       <div class="event-comments buffer-top">
-        <%= render partial: 'comments/form',
-                   locals: {comment: @new_comment || @event.comments.build} %>
-
         <div class="buffer-both">
-          <%= render partial: 'comments/comment',
-                     collection: @event.comments.except(@new_comment) %>
+          <%= render partial: 'comments/comment', collection: @event.comments.except(@new_comment) %>
         </div>
+        <%= render partial: 'comments/form', locals: {comment: @new_comment || @event.comments.build} %>
       </div>
     </div>
 
-    <div class="col-md-4">
-      <div class="event-owner shadow-sm">
+    <div class="tab-pane fade" role="tabpanel" id="tab-subscriptions">
+      <div class="event-owner buffer-top">
         <h4><%= t('subscriptions.call')%></h4>
         <p><%= render partial: 'users/user', object: @event.user %></p>
       </div>
-      <div class="event-subscriptions shadow-sm">
+
+      <div class="event-subscriptions buffer-top">
         <h4><%= t('subscriptions.will_go') if @event.subscriptions.except(@new_subscription).any? %></h4>
         <div>
           <p>
@@ -67,8 +80,9 @@
           </p>
         </div>
       </div>
+
       <% unless can_subscribe?(@event) %>
-        <div class="event-subscription-form shadow-sm" >
+        <div class="event-subscription-form buffer-top" >
           <h4><%= t('subscriptions.i_will_go') %></h4>
           <div>
             <%= render partial: 'subscriptions/form', locals: {
@@ -77,6 +91,27 @@
           </div>
         </div>
       <% end %>
+    </div>
+
+    <div class="tab-pane fade" role="tabpanel" id="tab-photos">
+      <div class="event-photos buffer-top">
+        <div class="row">
+          <div class="col-md-9">
+              <div class="event-photos-gallery">
+                <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
+              </div>
+              <% if current_user.present? %>
+                <div class="event-photo-form">
+                  <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="tab-pane fade" role="tabpanel" id="tab-map">
+      <div id="map" data-address="<%= @event.address %>" class="event-map buffer-top"></div>
     </div>
   </div>
 </div>

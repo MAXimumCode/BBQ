@@ -74,8 +74,11 @@ ru:
     avatar: "Аватарка"
     photo_add: "Добавил"
     photo: "Фото"
-    photos: "Загруженные фото:"
+    photos: "Загруженные фото"
     pincode: "Доступ только по пин-коду"
+    discussion: "Обсуждение"
+    participants: "Участники"
+    location: "Местоположение"
   buttons:
     save: "Сохранить"
     sign_in: "Войти"
