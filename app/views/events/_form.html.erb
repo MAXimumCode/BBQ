@@ -18,6 +18,10 @@
     <%= f.input :description %>
   </div>
 
+  <div class="mb-3">
+    <%= f.input :pincode, as: :string %>
+  </div>
+
   <%= f.button :submit, t('buttons.save'), class: "btn-primary" %>
   <%= t('text.or') %>
   <%= link_to t('buttons.back'), :back, class: 'btn btn-secondary btn-sm' %>

@@ -23,6 +23,7 @@ ru:
         address: "Место проведения"
         datetime: "Дата и время"
         description: "Описание"
+        pincode: "Пинкод доступа"
       comment:
         body: "Комментарий"
         user_name: "Имя пользователя"
@@ -51,6 +52,8 @@ ru:
       created: "Вы добавили фотографию к событию"
       error: "Что-то не так с фоткой"
       destroyed: "Вы удалили фотку"
+    event:
+      wrong_pincode: "Неверный пинкод!"
 
   app:
     name: "Шашлычная"
@@ -72,6 +75,7 @@ ru:
     photo_add: "Добавил"
     photo: "Фото"
     photos: "Загруженные фото:"
+    pincode: "Доступ только по пин-коду"
   buttons:
     save: "Сохранить"
     sign_in: "Войти"
@@ -88,6 +92,7 @@ ru:
     password_edit: "Сменить пароль"
     profile_edit: "Редактировать профиль"
     upload: "Загрузить"
+    return: "На главную"
   links:
     sign_in: "Войти"
     sign_up: "Зарегистрироваться"
