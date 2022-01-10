@@ -9,9 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     animationDuration: 800,
     animationTimingFunc: 'ease-in-out',
     breakpoints: {
-      1920: {
-        perView: 4
-      },
       1024: {
         perView: 3
       },
