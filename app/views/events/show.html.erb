@@ -1,6 +1,5 @@
 <div class="event">
   <div class="event-info row">
-
     <div class="col-md-12">
       <%= content_tag 'div', '', class: 'event-background',
                       style: "background-image: url(#{event_photo(@event)})"  %>
@@ -33,12 +32,12 @@
   <!-- Навигация -->
   <ul class="nav nav-pills nav-fill flex-column flex-sm-row" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <button class="flex-sm-fill text-sm-center nav-link active" id="comments-tab" data-bs-toggle="tab" data-bs-target="#tab-comments" type="button" role="tab" aria-selected="true">
+      <button class="flex-sm-fill text-sm-center nav-link" id="comments-tab" data-bs-toggle="tab" data-bs-target="#tab-comments" type="button" role="tab" aria-selected="true">
         <%= t('titles.discussion')%>
       </button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="flex-sm-fill text-sm-center nav-link" id="photo-tab" data-bs-toggle="tab" data-bs-target="#tab-photos" type="button" role="tab" aria-selected="false">
+      <button class="flex-sm-fill text-sm-center nav-link active" id="photo-tab" data-bs-toggle="tab" data-bs-target="#tab-photos" type="button" role="tab" aria-selected="false">
         <%= t('titles.photos')%>
       </button>
     </li>
@@ -55,13 +54,13 @@
   </ul>
 
   <!-- Табы -->
-  <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" role="tabpanel" id="tab-comments">
+  <div class="tab-content" id="myTab">
+    <div class="tab-pane fade" role="tabpanel" id="tab-comments">
       <div class="event-comments buffer-top">
         <div class="buffer-both">
           <%= render partial: 'comments/comment', collection: @event.comments.except(@new_comment) %>
         </div>
-        <%= render partial: 'comments/form', locals: {comment: @new_comment || @event.comments.build} %>
+          <%= render partial: 'comments/form', locals: {comment: @new_comment || @event.comments.build} %>
       </div>
     </div>
 
@@ -93,22 +92,29 @@
       <% end %>
     </div>
 
-    <div class="tab-pane fade" role="tabpanel" id="tab-photos">
+    <div class="tab-pane show active" role="tabpanel" id="tab-photos">
       <div class="event-photos buffer-top">
-        <div class="row">
-          <div class="col-md-9">
-              <div class="event-photos-gallery">
-                <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
-              </div>
-              <% if current_user.present? %>
-                <div class="event-photo-form">
-                  <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
-                </div>
-              <% end %>
-            </div>
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img src="https://img.icons8.com/stickers/30/000000/circled-left.png"/></button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="https://img.icons8.com/stickers/30/000000/circled-right.png"/></button>
+          </div>
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <%= render partial: 'photos/count', collection: @event.photos.except(@new_photo) %>
           </div>
         </div>
+        <% if current_user.present? %>
+          <div class="event-photo-form">
+            <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build} %>
+          </div>
+        <% end %>
       </div>
+    </div>
 
     <div class="tab-pane fade" role="tabpanel" id="tab-map">
       <div id="map" data-address="<%= @event.address %>" class="event-map buffer-top"></div>
