@@ -100,10 +100,12 @@
               <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
             </ul>
           </div>
-          <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img src="https://img.icons8.com/stickers/30/000000/circled-left.png"/></button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="https://img.icons8.com/stickers/30/000000/circled-right.png"/></button>
-          </div>
+          <% if @event.photos.except(@new_photo).any? %>
+            <div class="glide__arrows buffer-top" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img src="https://img.icons8.com/stickers/30/000000/circled-left.png"/></button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="https://img.icons8.com/stickers/30/000000/circled-right.png"/></button>
+            </div>
+          <% end %>
           <div class="glide__bullets" data-glide-el="controls[nav]">
             <%= render partial: 'photos/count', collection: @event.photos.except(@new_photo) %>
           </div>
