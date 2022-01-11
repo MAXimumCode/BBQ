@@ -6,7 +6,7 @@
   =require twitter-bootstrap-static/sprites
   */
 @import "custom";
-@import "lightbox";
+@import "~lightbox2/dist/css/lightbox";
 @import "~bootstrap/scss/bootstrap";
 @import "air-datepicker/air-datepicker.css";
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";

@@ -2,7 +2,7 @@
 
 <% if current_user_can_edit?(photo) %>
   <% delete_icon = link_to(
-    fa_icon('times'),
+    fa_icon('trash'),
     event_photo_path(photo.event, photo),
     method: :delete,
     data: {confirm: t('.delete_photo?')}
