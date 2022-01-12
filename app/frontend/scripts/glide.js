@@ -3,9 +3,10 @@ import Glide from '@glidejs/glide'
 document.addEventListener('DOMContentLoaded', () => {
   if(document.querySelector('.glide')) {
     const glide = new Glide('.glide', {
-      type: 'carousel',
+      type: 'slider',
       startAt: 0,
-      focusAt: 'center',
+      rewind: false,
+      bound: true,
       perView: 6,
       animationDuration: 800,
       animationTimingFunc: 'ease-in-out',
