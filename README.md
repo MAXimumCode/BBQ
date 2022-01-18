@@ -1,24 +1,34 @@
-# README
+# Приложение "Шашлычная"
+#### Приложение, в котором можно спланировать совместные мероприятия, добавлять фотографии, оставлять комментарии. Так же можно увидеть геолокацию мероприятия на карте.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Проект написан на Ruby on Rails 6.1.4
 
-Things you may want to cover:
+#### Ссылка на приложение
+https://pinchito.herokuapp.com/
 
-* Ruby version
+### Установка приложения:
+```ssh
+git clone git@github.com:MAXimumCode/BBQ.git bbq
+cd bbq
+bundle install
+bundle exec rails db:migrate
+```
 
-* System dependencies
+#### AMAZON S3
+Получить ключи можно тут: https://aws.amazon.com/
+```
+S3_ACCESS_KEY = <amazon s3 access key>
+S3_BUCKET_NAME = <amazon s3 bucket name>
+S3_SECRET_KEY = <amazon s3 secret key>
+S3_BUCKET_REGION = <s3 region> (example: us-east-2)
+```
 
-* Configuration
 
-* Database creation
+### Запуск сервера
+```ssh
+bundle exec rails s
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Автор
+[Максим Козаев](https://maximumcode.github.io/CV/)
+ 
