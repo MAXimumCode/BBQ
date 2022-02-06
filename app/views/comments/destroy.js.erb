@@ -1,0 +1,5 @@
+<% if current_user_can_edit?(@comment) %>
+
+  document.getElementById('message_<%= j(@comment.id) %>').remove()
+
+<% end %>
