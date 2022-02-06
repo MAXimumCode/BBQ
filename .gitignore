@@ -42,4 +42,4 @@ yarn-debug.log*
 public/uploads
 .env
 
-config/database.yml.example
+config/database.yml
