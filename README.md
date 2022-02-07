@@ -7,6 +7,7 @@
 https://pinchito.herokuapp.com/
 
 ### Установка приложения:
+Внимание! Перед запуском миграции нужно сконфигурировать файл **config/database.yml.example**
 ```ssh
 git clone git@github.com:MAXimumCode/BBQ.git bbq
 cd bbq
