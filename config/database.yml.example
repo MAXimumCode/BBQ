@@ -4,7 +4,8 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
-#   To activate remove ".example"
+#   To activate - cp config/database.yml.example to
+#                    config/database.yml
 #
 
 default: &default
@@ -24,8 +25,7 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: # You database example "postgresql"
+  adapter: postgresql
   database: # Name of your application
   username: # Your username
   password: # Your password
-
