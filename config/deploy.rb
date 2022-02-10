@@ -6,7 +6,7 @@ set :repo_url, "git@github.com:MAXimumCode/BBQ.git"
 
 set :deploy_to, '/home/deploy/apps/bbq/BBQ'
 
-append :linked_files, 'config/database.yml', '.env'
+append :linked_files, 'config/database.yml', 'config/secrets.yml', '.env'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'public/uploads'
 
 after 'deploy:restart', 'resque:restart'
