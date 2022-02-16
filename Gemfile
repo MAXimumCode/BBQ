@@ -33,7 +33,7 @@ group :development do
   gem 'capistrano-passenger'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
-  gem 'capistrano-resque', require: false
+  gem "capistrano-resque", "~> 0.2.2", require: false
 
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'

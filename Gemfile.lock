@@ -356,7 +356,7 @@ DEPENDENCIES
   capistrano-passenger
   capistrano-rails
   capistrano-rbenv
-  capistrano-resque
+  capistrano-resque (~> 0.2.2)
   carrierwave
   devise
   devise-i18n
