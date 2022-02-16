@@ -9,6 +9,8 @@ set :deploy_to, '/home/deploy/apps/bbq/BBQ'
 append :linked_files, 'config/database.yml', 'config/secrets.yml', '.env'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'public/uploads'
 
+after 'deploy:restart', 'resque:restart'
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
