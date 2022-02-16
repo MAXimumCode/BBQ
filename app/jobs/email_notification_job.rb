@@ -4,7 +4,7 @@ class EmailNotificationJob < ApplicationJob
   def perform(object)
     event = object.event
 
-    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email] - [object.user&.email]).uniq
+    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email] - [object&.user&.email]).uniq
 
     case object
     when Comment
