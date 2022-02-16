@@ -3,7 +3,6 @@ require "capistrano/setup"
 
 # Include default deployment tasks
 require "capistrano/deploy"
-require "capistrano-resque"
 
 # Load the SCM plugin appropriate to your project:
 #
@@ -39,6 +38,7 @@ require 'capistrano/bundler'
 require 'capistrano/rbenv' # или RVM
 require 'capistrano/rails'
 require 'capistrano/passenger'
+require 'capistrano-resque'
 
 set :rbenv_type, :user
 set :rbenv_ruby, '3.0.2'
