@@ -12,7 +12,8 @@ gem 'rmagick'
 gem 'fog-aws'
 gem 'mailjet'
 gem 'dotenv-rails'
-gem "pundit"
+gem 'pundit'
+gem 'resque'
 
 group :production do
   gem 'pg'
@@ -26,6 +27,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'letter_opener'
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
