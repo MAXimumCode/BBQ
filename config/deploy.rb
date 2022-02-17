@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.16.0"
 
-set :application, "BBQ"
+set :application, "bbq"
 set :repo_url, "git@github.com:MAXimumCode/BBQ.git"
 
 set :deploy_to, '/home/deploy/apps/bbq/BBQ'
