@@ -8,9 +8,9 @@ class EmailNotificationJob < ApplicationJob
 
     case object
     when Comment
-      all_emails.each { |mail| EventMailer.comment(event, object, mail).deliver_later }
+      all_emails.each { |mail| EventMailer.comment(object, mail).deliver_later }
     when Photo
-      all_emails.each { |mail| EventMailer.photo(event, object, mail).deliver_later }
+      all_emails.each { |mail| EventMailer.photo(object, mail).deliver_later }
     end
   end
 end
