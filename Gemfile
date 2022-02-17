@@ -14,6 +14,7 @@ gem 'mailjet'
 gem 'dotenv-rails'
 gem 'pundit'
 gem 'resque'
+gem 'listen', '~> 3.3'
 
 group :production do
   gem 'pg'
@@ -35,7 +36,6 @@ group :development do
   gem 'capistrano-bundler'
   gem "capistrano-resque", "~> 0.2.2", require: false
 
-  gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
