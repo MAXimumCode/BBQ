@@ -5,7 +5,7 @@
 <hr/>
 
 <%= t '.event' %>
-<h3><%= @event.title %></h3>
+<%= content_tag(:h3, content_tag(:a, @event.title, href: event_url(@event))) %>
 
 <%= t '.datetime' %>
 <h4><%= l @event.datetime %></h4>
