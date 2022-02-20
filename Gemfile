@@ -14,7 +14,8 @@ gem 'mailjet'
 gem 'dotenv-rails'
 gem 'pundit'
 gem 'resque'
-gem 'listen', '~> 3.3'
+gem "omniauth", "~> 1.9.1"
+gem 'omniauth-facebook'
 
 group :production do
   gem 'pg'
@@ -35,6 +36,7 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
   gem "capistrano-resque", "~> 0.2.2", require: false
+  gem 'listen', '~> 3.3'
 
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'

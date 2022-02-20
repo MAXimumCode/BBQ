@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_09_151229) do
+ActiveRecord::Schema.define(version: 2022_02_17_141740) do
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
@@ -71,6 +71,8 @@ ActiveRecord::Schema.define(version: 2022_01_09_151229) do
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.string "avatar"
+    t.string "provider"
+    t.string "url"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

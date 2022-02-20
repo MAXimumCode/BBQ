@@ -153,3 +153,10 @@ ru:
         change_your_password: "Смена пароля"
         new_password: "Новый пароль"
         confirm_new_password: "Подтверждение пароля"
+    shared:
+      links:
+        sign_in_with_provider: "Войти с помощью:"
+  devise:
+    omniauth_callbacks:
+      success: "Успешно!"
+      failure: "Ошибка!"
