@@ -16,6 +16,7 @@ gem 'pundit'
 gem 'resque'
 gem "omniauth", "~> 1.9.1"
 gem 'omniauth-facebook'
+gem 'omniauth-vkontakte'
 
 group :production do
   gem 'pg'

@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[facebook]
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[facebook vkontakte]
 
   has_many :events, dependent: :destroy
   has_many :comments, dependent: :destroy
@@ -12,21 +12,15 @@ class User < ApplicationRecord
 
   mount_uploader :avatar, AvatarUploader
 
-  def self.find_for_facebook_oauth(access_token)
+  def self.find_for_oauth(access_token)
+    user = User.where(email: access_token.info.email).first
 
-    email = access_token.info.email
-    user = where(email: email).first
-
-    return user if user.present?
-
-    provider = access_token.provider
-    id = access_token.extra.raw_info.id
-    url = "https://facebook.com/#{id}"
-
-    where(url: url, provider: provider).first_or_create! do |user|
-      user.email = email
-      user.password = Devise.friendly_token.first(16)
-    end
+    user ||= User.create(
+      name: access_token.info.name,
+      email: access_token.info.email,
+      password: Devise.friendly_token[0, 20]
+    )
+    user
   end
 
   def send_devise_notification(notification, *args)

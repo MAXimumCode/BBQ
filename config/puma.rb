@@ -41,3 +41,7 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
+
+ssl_bind 'localhost', '3001',
+         key:'/home/maks/.ssh/server.key',
+         cert: '/home/maks/.ssh/server.crt'

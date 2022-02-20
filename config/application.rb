@@ -25,6 +25,7 @@ module Bbq
     config.load_defaults 6.1
 
     config.time_zone = 'Moscow'
+    config.force_ssl = true
 
     config.i18n.default_locale = :ru
 
