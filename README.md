@@ -6,6 +6,8 @@
 #### Ссылка на приложение
 https://pinchito.herokuapp.com/
 
+https://eventsacademy.ru/
+
 ### Установка приложения:
 Внимание! Перед запуском миграции нужно сконфигурировать файл **config/database.yml.example**
 ```ssh
