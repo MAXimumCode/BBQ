@@ -8,6 +8,8 @@ module Users
       authenticate_user(:facebook)
     end
 
+    private
+
     def authenticate_user(provider)
       @user = User.find_for_oauth(request.env['omniauth.auth'])
 

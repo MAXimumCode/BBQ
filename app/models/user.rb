@@ -15,12 +15,13 @@ class User < ApplicationRecord
   def self.find_for_oauth(access_token)
     user = User.where(email: access_token.info.email).first
 
-    user ||= User.create(
+    user || create(
       name: access_token.info.name,
       email: access_token.info.email,
+      remote_avatar_url: access_token.info.image,
       password: Devise.friendly_token[0, 20]
     )
-    user
+
   end
 
   def send_devise_notification(notification, *args)

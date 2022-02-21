@@ -272,10 +272,12 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   config.omniauth :facebook, ENV['OMNIAUTH_FACEBOOK_ID'], ENV['OMNIAUTH_FACEBOOK_SECRET'], {
-    scope: 'email'
+    scope: 'email',
+    image_size: { width: 350, height: 350 }
   }
   config.omniauth :vkontakte, ENV['OMNIAUTH_VKONTAKTE_ID'], ENV['OMNIAUTH_VKONTAKTE_SECRET'], {
-    scope: 'email'
+    scope: 'email',
+    image_size: 'original'
   }
 
   # ==> Warden configuration
