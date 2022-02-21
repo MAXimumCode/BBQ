@@ -13,7 +13,7 @@ class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
   def self.find_for_oauth(access_token)
-    user = User.where(email: access_token.info.email).first
+    user = where(email: access_token.info.email).first
 
     user || create(
       name: access_token.info.name,
@@ -21,7 +21,6 @@ class User < ApplicationRecord
       remote_avatar_url: access_token.info.image,
       password: Devise.friendly_token[0, 20]
     )
-
   end
 
   def send_devise_notification(notification, *args)
