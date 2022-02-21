@@ -17,6 +17,7 @@ gem 'resque'
 gem "omniauth", "~> 1.9.1"
 gem 'omniauth-facebook'
 gem 'omniauth-vkontakte'
+gem 'listen', '~> 3.3'
 
 group :production do
   gem 'pg'
@@ -37,7 +38,7 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
   gem "capistrano-resque", "~> 0.2.2", require: false
-  gem 'listen', '~> 3.3'
+
 
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
