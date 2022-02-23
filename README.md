@@ -3,7 +3,7 @@
 
 Проект написан на Ruby on Rails 6.1.4
 
-#### Ссылка на приложение
+#### Ссылки на приложение
 https://pinchito.herokuapp.com/
 
 https://eventsacademy.ru/
